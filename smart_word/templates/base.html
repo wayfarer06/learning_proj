@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SmartWord</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="topnav">
+  <a class="active" href="">Home</a>
+  <a href="">Output</a>
+    </div>
+    <br><br>
+
+        {% block content %}
+<form>
+  <textarea></textarea><br><br>
+  <div class="sliderWrapper">
+    <div>punctuation</div>
+    <label class="switch">
+      <input id="punctuation" type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  <div/><br><br>
+  <input class="button" type="submit" value="Submit">
+</form>
+        {% endblock %}
+
+  </body>
+</html>
+
