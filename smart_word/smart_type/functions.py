@@ -9,6 +9,28 @@ def rm_punctuation(string):
             string = string.replace(i, '')
     return string
 
-string = 'Whereof one cannot speak, thereof one must be silent.'
-result = rm_punctuation(string)
-print(result)
+def uppercase(string):
+    string = string.upper()
+    return string
+
+def lowercase(string):
+    string = string.lower()
+    return string
+
+def rm_newline(string):
+    string = ''.join(string.splitlines())
+    return string
+
+def rm_extra_spaces(string):
+    new_string = ""
+    for i in range(len(string)):
+        if string[i] == ' ' and string[i-1] == ' ':
+            pass
+        else:
+            new_string += string[i]
+    return new_string
+
+
+
+
+
