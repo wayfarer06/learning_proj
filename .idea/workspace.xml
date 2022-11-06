@@ -38,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/smart_word" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,7 +101,7 @@
       <updated>1666511698905</updated>
       <workItem from="1667027639478" duration="2071000" />
       <workItem from="1667036991859" duration="3378000" />
-      <workItem from="1667060423911" duration="47958000" />
+      <workItem from="1667060423911" duration="49174000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1666512196507</created>
@@ -156,6 +156,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/learning_proj$functions.coverage" NAME="functions Coverage Results" MODIFIED="1667731536636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/smart_word/smart_type" />
+    <SUITE FILE_PATH="coverage/learning_proj$functions.coverage" NAME="functions Coverage Results" MODIFIED="1667732601433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/smart_word/smart_type" />
   </component>
 </project>

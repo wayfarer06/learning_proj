@@ -30,6 +30,11 @@ def rm_extra_spaces(string):
             new_string += string[i]
     return new_string
 
+def count_alpha_char(string):
+    return len([x for x in string if x.isalpha()])
+
+
+
 
 
 
