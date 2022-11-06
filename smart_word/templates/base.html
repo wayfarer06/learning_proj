@@ -3,28 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>SmartWord</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/style.css">
   </head>
 
   <body>
+    <br><br>
     <div class="topnav">
-  <a class="active" href="">Home</a>
-  <a href="">Output</a>
+      <a class="{% if nbar == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+      <a class="{% if nbar == 'output' %}active{% endif %}" href="{% url 'output' %}">Output</a>
     </div>
     <br><br>
 
         {% block content %}
-<form>
-  <textarea></textarea><br><br>
-  <div class="sliderWrapper">
-    <div>punctuation</div>
-    <label class="switch">
-      <input id="punctuation" type="checkbox">
-      <span class="slider round"></span>
-    </label>
-  <div/><br><br>
-  <input class="button" type="submit" value="Submit">
-</form>
+
         {% endblock %}
 
   </body>

@@ -2,12 +2,55 @@
 
 {% block content %}
 
-<form>
-  <textarea></textarea><br><br>
-    <label class="switch">
+<form method="post" action="{% url 'output' %}">
+  {% csrf_token %}
+  <textarea name="input_text"></textarea><br><br><br>
+
+  <label class="container">Remove Punctuations
+    <input type="checkbox" name="punctuation">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Upper Case
     <input type="checkbox">
-    <span class="slider round"></span>
-    </label><br><br>
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Lower Case
+    <input type="checkbox" value="lowercase">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">New Line Remove
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Extra Space Remove
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Count Characters
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Spell Check
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Generate Summary of a Word
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="container">Remove Stop Words
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label><br><br>
+
   <input class="button" type="submit" value="Submit">
 </form>
 
