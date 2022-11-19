@@ -1,5 +1,7 @@
 from spellchecker import SpellChecker
 import re
+import wikipedia
+from wikipedia import DisambiguationError, PageError
 
 def rm_punctuation(string):
     punc_list = [".", "?", "!",
@@ -46,7 +48,37 @@ def spell_check(string):
             words[index] = spell.correction(word)
     return ' '.join(words)
 
-print(spell_check('For delaring a string, we assign a variable to the string.'))
+def wiki_summary(string):
+    try:
+        summary = wikipedia.page(string, auto_suggest=False).summary
+    except PageError:
+        summary = f'{string} page not found try another word'
+    except DisambiguationError:
+        summary = f'{string} is ambiguous try to be more specific'
+    return summary
+
+def stop_words(string):
+    stopwords = ['bug', 'tram', 'shoe']
+    word_list = re.findall(r"[\w']+|[.,!?;]+|[\n]", string)
+    index = -1
+    new_string = ""
+    for word in word_list:
+        index += 1
+        if word in stopwords:
+            for i in word:
+                word = word.replace(i, 'x')
+        word_list[index] = word
+    string = " ".join(word_list)
+    for i in range(len(string)):
+        if string[i] == ' ' and string[i + 1] == ',':
+            pass
+        else:
+            new_string += string[i]
+    return new_string
+
+print(stop_words('bug, in the \n shoe'))
+
+
 
 
 
