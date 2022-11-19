@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="908bf823-aeb8-4864-a830-b5db7c110e69" name="Changes" comment="test">
       <change afterPath="$PROJECT_DIR$/smart_word/smart_type/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/learning_proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning_proj.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smart_word/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/smart_word/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smart_word/smart_type/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smart_word/smart_type/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smart_word/smart_word/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/smart_word/smart_word/settings.py" afterDir="false" />
@@ -54,7 +57,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "WebServerToolWindowFactoryState": "false",
     "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -101,7 +104,7 @@
       <updated>1666511698905</updated>
       <workItem from="1667027639478" duration="2071000" />
       <workItem from="1667036991859" duration="3378000" />
-      <workItem from="1667060423911" duration="49174000" />
+      <workItem from="1667060423911" duration="59417000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1666512196507</created>
@@ -156,6 +159,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/learning_proj$functions.coverage" NAME="functions Coverage Results" MODIFIED="1667732601433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/smart_word/smart_type" />
+    <SUITE FILE_PATH="coverage/learning_proj$functions.coverage" NAME="functions Coverage Results" MODIFIED="1668356031025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/smart_word/smart_type" />
   </component>
 </project>
