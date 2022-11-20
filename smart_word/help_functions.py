@@ -14,11 +14,11 @@ def rm_punctuation(string):
             string = string.replace(i, '')
     return string
 
-def uppercase(string):
+def make_uppercase(string):
     string = string.upper()
     return string
 
-def lowercase(string):
+def make_lowercase(string):
     string = string.lower()
     return string
 
@@ -51,6 +51,7 @@ def spell_check(string):
 def wiki_summary(string):
     try:
         summary = wikipedia.page(string, auto_suggest=False).summary
+        summary = summary.replace('\n', '\n\n')
     except PageError:
         summary = f'{string} page not found try another word'
     except DisambiguationError:
@@ -75,8 +76,6 @@ def stop_words(string):
         else:
             new_string += string[i]
     return new_string
-
-print(stop_words('bug, in the \n shoe'))
 
 
 

@@ -2,7 +2,15 @@
 
 {% block content %}
 <div class="output_text">
-    <p>{{input | linebreaks}}</p>
+    <p>{{output | linebreaks}}</p>
 </div>
+<br><br>
+
+{% if summary_on == 'yes' %}
+<div class="summary_text">
+    <p><b>Summary from Wikipedia</b><br>
+    {{summary | linebreaks}}</p>
+</div>
+{% endif %}
 
 {% endblock %}
