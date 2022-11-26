@@ -1,16 +1,22 @@
 {%extends "base.html"%}
 
 {% block content %}
-<div class="output_text">
-    <p>{{output | linebreaks}}</p>
-</div>
-<br><br>
+<div class="output_text_area">
+    <div class="output_text">
+        <p>{{output | linebreaks}}
+            {% if count_char_on == 'yes' %}
+            <p><b>Count of alphabetic characters:</b> {{countchar}}</p>
+            {% endif %}
+        </p>
+    </div>
+    <br><br>
 
-{% if summary_on == 'yes' %}
-<div class="summary_text">
-    <p><b>Summary from Wikipedia</b><br>
-    {{summary | linebreaks}}</p>
+    {% if summary_on == 'yes' %}
+    <div class="summary_text">
+        <p><b>Summary from Wikipedia</b><br>
+            {{summary | linebreaks}}</p>
+    </div>
+    {% endif %}
 </div>
-{% endif %}
 
 {% endblock %}

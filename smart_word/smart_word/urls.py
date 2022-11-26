@@ -19,6 +19,6 @@ from smart_type.views import HomePage, MyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', HomePage.as_view(), name='home'),
-    path('output/', MyView.as_view(), name='output')
+    path('output/', MyView.as_view(), name='output'),
+    path('', HomePage.as_view(), name='home'),
 ]

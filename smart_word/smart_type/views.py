@@ -9,7 +9,8 @@ from help_functions import (
     rm_extra_spaces,
     spell_check,
     stop_words,
-    wiki_summary
+    wiki_summary,
+    count_alpha_char
 )
 
 
@@ -38,10 +39,17 @@ class MyView(View):
         stopwords = request.POST.get("stopwords", None)
         summary = request.POST.get("summary", None)
         context['nbar'] = 'output'
-        attribute_dict = {"punctuation": [punctuation, rm_punctuation], "uppercase": [uppercase, make_uppercase],
-                          "lowercase": [lowercase, make_lowercase], "newline": [newline, rm_newline],
-                          "extraspace": [extraspace, rm_extra_spaces],
-                          "spellcheck": [spellcheck, spell_check], "stopwords": [stopwords, stop_words]}
+
+        if lowercase and uppercase == 'on':
+            attribute_dict = {"punctuation": [punctuation, rm_punctuation], "uppercase": [uppercase, make_uppercase],
+                              "newline": [newline, rm_newline],
+                              "extraspace": [extraspace, rm_extra_spaces],
+                              "spellcheck": [spellcheck, spell_check], "stopwords": [stopwords, stop_words]}
+        else:
+            attribute_dict = {"punctuation": [punctuation, rm_punctuation], "uppercase": [uppercase, make_uppercase],
+                              "lowercase": [lowercase, make_lowercase], "newline": [newline, rm_newline],
+                              "extraspace": [extraspace, rm_extra_spaces],
+                              "spellcheck": [spellcheck, spell_check], "stopwords": [stopwords, stop_words]}
         for key in attribute_dict:
             if attribute_dict[key][0] == 'on':
                 input = attribute_dict[key][1](input)
@@ -51,6 +59,10 @@ class MyView(View):
         if summary == 'on':
             context['summary'] = wiki_summary(input)
             context['summary_on'] = 'yes'
+
+        if countchar == 'on':
+            context['countchar'] = count_alpha_char(input)
+            context['count_char_on'] = 'yes'
 
 
         return render(request, 'output.html', context)

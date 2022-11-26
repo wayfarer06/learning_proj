@@ -49,14 +49,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/smart_word/" />
@@ -107,7 +107,10 @@
       <workItem from="1667027639478" duration="2071000" />
       <workItem from="1667036991859" duration="3378000" />
       <workItem from="1667060423911" duration="62116000" />
-      <workItem from="1668847593086" duration="20605000" />
+      <workItem from="1668847593086" duration="27310000" />
+      <workItem from="1668949849164" duration="1371000" />
+      <workItem from="1668955560701" duration="4589000" />
+      <workItem from="1669408336747" duration="6121000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1666512196507</created>

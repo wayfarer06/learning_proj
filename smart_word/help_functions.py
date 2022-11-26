@@ -39,23 +39,39 @@ def count_alpha_char(string):
     return len([x for x in string if x.isalpha()])
 
 def spell_check(string):
-    spell = SpellChecker()
-    index = -1
-    words = re.findall(r"[\w']+|[.,!?;]", string)
-    for word in words:
-        index += 1
-        if spell.unknown(word):
-            words[index] = spell.correction(word)
-    return ' '.join(words)
+    try:
+        spell = SpellChecker()
+        index = -1
+        words = re.findall(r"[\w']+|[.,!?;]+|[\n]", string)
+        for word in words:
+            index += 1
+            if spell.unknown(word) and word != '\n':
+                words[index] = spell.correction(word)
+        words = ' '.join(words)
+        new_string = ""
+        for i in range(len(words)):
+            try:
+                if words[i] == ' ' and words[i + 1] in [".", ",", "!", "?", ";"]:
+                    pass
+                else:
+                    new_string += words[i]
+            except IndexError:
+                pass
+    except TypeError:
+        new_string = 'Only strings can be spell checked please include text to the input field.'
+    return new_string
 
 def wiki_summary(string):
-    try:
-        summary = wikipedia.page(string, auto_suggest=False).summary
-        summary = summary.replace('\n', '\n\n')
-    except PageError:
-        summary = f'{string} page not found try another word'
-    except DisambiguationError:
-        summary = f'{string} is ambiguous try to be more specific'
+    if len(string.split()) >= 5:
+        summary = 'Input is 5 or more words. Please add single or couple words to generate summary'
+    else:
+        try:
+            summary = wikipedia.page(string, auto_suggest=False).summary
+            summary = summary.replace('\n', '\n\n')
+        except PageError:
+            summary = f'{string} page not found try another word'
+        except DisambiguationError:
+            summary = f'{string} is ambiguous try to be more specific'
     return summary
 
 def stop_words(string):

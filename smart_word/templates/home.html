@@ -1,10 +1,11 @@
 {%extends "base.html"%}
 
 {% block content %}
+<div class="input_form">
 
-<form method="post" action="{% url 'output' %}">
+  <form method="post" action="{% url 'output' %}">
   {% csrf_token %}
-  <textarea name="input_text"></textarea><br><br><br>
+  <textarea placeholder="Add your text here..." name="input_text"></textarea><br><br><br>
 
   <label class="container">Remove Punctuations
     <input type="checkbox" name="punctuation">
@@ -52,6 +53,7 @@
   </label><br><br>
 
   <input class="button" type="submit" value="Submit">
-</form>
+  </form>
+</div>
 
 {% endblock %}
